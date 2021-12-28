@@ -75,7 +75,7 @@ SQLAlchemy==1.4.29
 tensorboard @ file:///tmp/build/80754af9/tensorboard_1633093581375/work/tensorboard-2.6.0-py3-none-any.whl
 tensorboard-data-server @ file:///C:/ci/tensorboard-data-server_1633035225228/work/tensorboard_data_server-0.6.0-py3-none-any.whl
 tensorboard-plugin-wit==1.6.0
-tensorflow==2.6.0
+tensorflow==2.7.0
 tensorflow-estimator @ file:///home/builder/adipietro/tf/tensorflow-estimator_1630508970172/work/tensorflow_estimator-2.6.0-py2.py3-none-any.whl
 termcolor==1.1.0
 tornado==6.1
