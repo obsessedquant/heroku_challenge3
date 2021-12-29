@@ -1,8 +1,5 @@
 Flask==2.0.2
-Flask-SQLAlchemy==2.5.1
 gunicorn==20.1.0
-Jinja2==3.0.3
 keras==2.7.0
 opencv-python==4.5.4.60
-SQLAlchemy==1.4.29
 tensorflow==2.7.0
