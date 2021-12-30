@@ -14,26 +14,20 @@
 # 2. Run "python main.py".
 # 3. Navigate the browser to the local webpage.
 from flask import Flask, render_template, Response
-from face_detection import face_detect
+from face_detection import getframes
+import cv2
 
 app = Flask(__name__)
 
-
+camera = cv2.VideoCapture(0)
 @app.route("/")
 def index():
     return render_template("index.html")
 
-
-def gen(face_detection):
-    while True:
-        frame = face_detection.get_frame()
-        yield (b"--frame\r\n" b"Content-Type: image/jpeg\r\n\r\n" + frame + b"\r\n\r\n")
-
-
 @app.route("/video_feed")
 def video_feed():
     return Response(
-        gen(VideoCamera()), mimetype="multipart/x-mixed-replace; boundary=frame"
+        getframes(), mimetype="multipart/x-mixed-replace; boundary=frame"
     )
 
 
