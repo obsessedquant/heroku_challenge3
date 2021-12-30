@@ -2,9 +2,11 @@ import cv2
 import sys
 import os
 import numpy as np
-import tensorflow as tf
-from keras.models import model_from_json
-from keras.preprocessing import image
+#import tensorflow as tf
+#from keras.models import model_from_json
+#from keras.preprocessing import image
+from tensorflow.keras.models import model_from_json
+from tensorflow.keras.preprocessing import image
 
 def getframes():
     # get classifier
@@ -44,7 +46,7 @@ def getframes():
             # convert aoi to 48X48
             aoi_gray = cv2.resize(aoi_gray, (48, 48))
             # Image Processing
-            image_pixels = tf.keras.preprocessing.image.img_to_array(
+            image_pixels = image.img_to_array(
                 aoi_gray
             )  # convert to array
             image_pixels = np.expand_dims(image_pixels, axis=0)
