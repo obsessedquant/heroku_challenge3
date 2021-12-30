@@ -2,9 +2,11 @@ import cv2
 import sys
 import os
 import numpy as np
-import tensorflow as tf
-from keras.models import model_from_json
-from keras.preprocessing import image
+# import tensorflow as tf
+# from keras.models import model_from_json
+# from keras.preprocessing import image
+from tensorflow.keras.models import model_from_json
+from tensorflow.keras.preprocessing import image
 
 
 class face_detect(object):
