@@ -1,57 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Cam</title>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        var but = document.getElementById("but");
-        var video = document.getElementById("vid");
-        var mediaDevices = navigator.mediaDevices;
-        vid.muted = true;
-        but.addEventListener("click", () => {
-          // Accessing the user camera and video.
-          mediaDevices
-            .getUserMedia({
-              video: true,
-              audio: true,
-            })
-            .then((stream) => {
-              // Changing the source of video to current stream.
-              video.srcObject = stream;
-              video.addEventListener("loadedmetadata", () => {
-                video.play();
-              });
-            })
-            .catch(alert);
-        });
-      });
-    </script>
-  </head>
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dimension by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-  <style>
-    div {
-      width: 500px;
-      height: 400px;
-      border: 2px solid black;
-      position: relative;
-    }
-    video {
-      width: 500px;
-      height: 400px;
-      object-fit: cover;
-    }
-  </style>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-  <body>
-    <center>
-      <div>
-        <video id="vid"></video>
-      </div>
-      <br />
-      <button id="but" autoplay>Open WebCam</button>
-    </center>
-  </body>
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<img width="100%" height="100%" src="static/images/AI.png"></img>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Face-OFF</h1>
+								<p>An app developed to detect your emotions using advanced ML technology.</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Intro</a></li>
+								<li><a href="#work">Analysis</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="intro">
+								<h2 class="major">Intro</h2>
+								<span class="image main"><img src="static/images/intro.PNG" alt="" /></span>
+								<p>We will read a large data set of videos of people performing various facial expressions 
+and use analysis of key facial features to determine and predict which emotions are 
+being expressed.  <a href="#work">Try Yourself !!</a>.</p>
+								<p>This training data set will be used to predict expressed emotions in a 
+real-time video feed app.</p>
+							</article>
+
+						<!-- Work -->
+							<article id="work">
+								<h2 class="major">Analysis</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+            <h3 class="mt-5">Live Streaming</h3>
+            <img src="{{ url_for('video_feed') }}" width="100%">
+        </div>
+    </div>
+</div>					
+
+								</article>
+
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Team Name.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+
+	</body>
 </html>
