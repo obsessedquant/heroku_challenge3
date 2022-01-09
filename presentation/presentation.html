@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>face-off | AI face recognition</title>
+
+    <meta
+      name="description"
+      content="A framework for easily creating beautiful presentations using HTML"
+    />
+    <meta name="author" content="Hakim El Hattab" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h2>Face-Off</h2>
+          <div
+            class="tenor-gif-embed"
+            data-postid="22960854"
+            data-share-method="host"
+            data-aspect-ratio="2.03822"
+            data-width="100%"
+          >
+            <a href="https://tenor.com/view/face-gif-22960854">Face GIF</a>from
+            <a href="https://tenor.com/search/face-gifs">Face GIFs</a>
+          </div>
+          <script
+            type="text/javascript"
+            async
+            src="https://tenor.com/embed.js"
+          ></script>
+        </section>
+
+        <section>
+          <h2>Who We Are</h2>
+          <img src="../images/team.png" alt="Team" />
+        </section>
+
+        <section>
+          <h2>What we do</h2>
+          <p>
+            Predict human emotions, gender, age, ethnicity from video
+            images...<br /><br />...using artificial intelligence deep learning.
+          </p>
+        </section>
+
+        <section>
+          <h2>Background & Motivations</h2>
+          <p>
+            Desire to understand how deep learning can be applied to video
+            imaging to predict various human characteristics and also how
+            accurate it can be at doing so.
+          </p>
+        </section>
+
+        <section>
+          <h2>Questions to Answer</h2>
+          <p>
+            What is the best method to measure facial expressions, gender, age,
+            ethnicity using video?<br /><br />How accurate are the predictions
+            of the deep learning model?<br /><br />What are the challenges in
+            detecting micro expressions or increasing the accuracy of reading
+            human characteristics from video images?
+          </p>
+        </section>
+
+        <section>
+          <h2>DEMO</h2>
+          <iframe
+            src="https://giphy.com/embed/3oEjHYE3TqEC4CtZra"
+            width="360"
+            height="480"
+            frameborder="0"
+            class="giphy-embed"
+            allowfullscreen
+          ></iframe>
+          <p>
+            <a
+              href="https://giphy.com/gifs/art-facial-recognition-davestrick-3oEjHYE3TqEC4CtZra"
+            ></a>
+          </p>
+        </section>
+
+        <section>
+          <h2>Joel content here</h2>
+        </section>
+
+        <section>
+          <h2>Questions?</h2>
+          <div style="width: 480px; display: flex; justify-content: center">
+            <iframe
+              allow="fullscreen"
+              frameborder="0"
+              height="360"
+              src="https://giphy.com/embed/c0W7fa8sNDCTpqy1Xy/video"
+              width="480"
+            ></iframe>
+          </div>
+        </section>
+
+        <!-- <section>
+          <h2>Questions?</h2>
+          <div style="width: 100%">
+            <div
+              style="
+                height: 0;
+                padding-bottom: 75%;
+                position: relative;
+                width: 100%;
+              "
+            >
+              <iframe
+                allowfullscreen=""
+                frameborder="0"
+                height="100%"
+                src="https://giphy.com/embed/c0W7fa8sNDCTpqy1Xy/video"
+                style="left: 0; position: absolute; top: 0"
+                width="100%"
+              ></iframe>
+            </div>
+          </div>
+        </section> -->
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script>
+      Reveal.initialize();
+
+      const loadScript = (src) => {
+        return new Promise((resolve, reject) => {
+          const script = document.createElement("script");
+          script.type = "text/javascript";
+          script.onload = resolve;
+          script.onerror = reject;
+          script.src = src;
+          document.head.append(script);
+        });
+      };
+
+      loadScript("plugin/highlight/highlight.js").then(() => {
+        Reveal.registerPlugin(RevealHighlight);
+      });
+    </script>
+  </body>
+</html>
